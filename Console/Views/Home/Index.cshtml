@@ -1,0 +1,16 @@
+﻿@model UserDto
+
+<div class="row-main">
+    <div class="row-messages"></div>
+    <div class="row-send">
+        <span id="data-send-name">@Model.Username</span><span id="data-send-id">@@@Model.Id~#</span><span id="data-send-text"></span><span id="data-send-caret"></span>
+    </div>
+</div>
+@section Scripts
+{
+    <script src="~/js/signalr.js"></script>
+    <script src="~/js/axios.js"></script>
+    <script src="~/js/signalRService.js"></script>
+    <script src="~/js/process.js"></script>
+}
+`

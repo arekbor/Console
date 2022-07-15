@@ -1,0 +1,27 @@
+﻿@model RegisterUserDto
+
+<form asp-action="Register" asp-controller="Home" method="post" class="form">
+    <div class="form-section form-validation" asp-validation-summary="All"></div>
+    <div class="form-section">
+        <label asp-for="Username" class="disable-selecting-text"></label>
+        <input asp-for="Username">
+    </div>
+    <div class="form-section">
+        <label asp-for="Password" class="disable-selecting-text"></label>
+        <input asp-for="Password" type="Password">
+    </div>
+    <div class="form-section">
+        <label asp-for="ConfirmPassword" class="disable-selecting-text"></label>
+        <input asp-for="ConfirmPassword" type="Password">
+    </div>
+    <div class="form-buttons-section">
+        <input type="button" value="Login" onclick="location.href='@Url.Action("Login", "Home")'">
+        <input type="submit">
+    </div>
+</form>
+
+@section Scripts
+{
+    <script src="~/js/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/js/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
